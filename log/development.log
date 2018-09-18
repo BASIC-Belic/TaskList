@@ -749,3 +749,77 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:03:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant TasksController::TASKS:
+  app/controllers/tasks_controller.rb:10:in `show'
+
+Started POST "/__better_errors/0487630b36e0f10a/variables" for 127.0.0.1 at 2018-09-18 15:03:20 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:03:42 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/tasks_controller.rb:10:in `show'
+
+Started POST "/__better_errors/080596c0ba27dc0c/variables" for 127.0.0.1 at 2018-09-18 15:03:42 -0700
+Started GET "/tasks/2" for 127.0.0.1 at 2018-09-18 15:03:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/tasks_controller.rb:10:in `show'
+
+Started POST "/__better_errors/6744227162bffaf8/variables" for 127.0.0.1 at 2018-09-18 15:03:45 -0700
+Started GET "/tasks/2" for 127.0.0.1 at 2018-09-18 15:04:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for true:TrueClass:
+  app/controllers/tasks_controller.rb:12:in `show'
+
+Started POST "/__better_errors/1341365a75418c8e/variables" for 127.0.0.1 at 2018-09-18 15:04:29 -0700
+Started GET "/tasks/2" for 127.0.0.1 at 2018-09-18 15:04:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 76ms (Views: 47.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:04:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:04:58 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 45.7ms | ActiveRecord: 8.1ms)
+
+
