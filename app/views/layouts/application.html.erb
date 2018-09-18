@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskList</title>
+    <title>Task Controller by Chantelle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>My Tasks</h1>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      &copy; 2018, Chantelle Belic
+    </footer>
   </body>
 </html>
