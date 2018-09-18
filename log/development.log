@@ -823,3 +823,31 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 84ms (Views: 45.7ms | ActiveRecord: 8.1ms)
 
 
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:10:49 -0700
+
+SyntaxError - Invalid return in class/module body
+  return @task[:action]
+  ^~~~~~:
+  app/controllers/tasks_controller.rb:19:in `'
+
+Started POST "/__better_errors/11b6816edb4e4945/variables" for 127.0.0.1 at 2018-09-18 15:10:49 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:11:06 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 171ms (Views: 97.2ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:11:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 43.7ms | ActiveRecord: 6.3ms)
+
+

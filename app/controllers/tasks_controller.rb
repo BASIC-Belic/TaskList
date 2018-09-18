@@ -6,13 +6,17 @@ class TasksController < ApplicationController
   end
 
   def show
-    @tasks ||= Task.all
-    index = params[:id].to_i
 
-    @task = @tasks[index - 1][:action]
+    index = (params[:id].to_i)
+
+    @task = Task.find_by(id:index)[:action]
+  
+
     if @task.nil?
       head :not_found
     end
   end
+
+
 
 end
