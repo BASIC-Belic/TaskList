@@ -9,10 +9,10 @@ class TasksController < ApplicationController
 
     index = (params[:id].to_i)
 
-    @task = Task.find_by(id:index)
+    @task = Task.find_by(id: index)
 
     if @task.nil?
-      render :notfound, status: :not_found
+      render :invalid_task_page, status: :not_found
       # head :not_found
     end
   end

@@ -973,3 +973,272 @@ Processing by TasksController#show as HTML
 Completed 404 Not Found in 56ms (Views: 54.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/tasks/11" for 127.0.0.1 at 2018-09-18 15:37:47 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/notfound.html.erb within layouts/application
+  Rendered tasks/notfound.html.erb within layouts/application (1.4ms)
+Completed 404 Not Found in 74ms (Views: 64.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-18 15:37:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 140ms (Views: 119.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:40:28 -0700
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:40:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 204ms (Views: 134.7ms | ActiveRecord: 8.4ms)
+
+
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_id.html.erb within layouts/application
+  Rendered tasks/invalid_id.html.erb within layouts/application (57.7ms)
+Completed 404 Not Found in 228ms (Views: 168.6ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:40:48 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/not_found.html.erb within layouts/application
+  Rendered tasks/not_found.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 74ms (Views: 65.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:40:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/not_found.html.erb within layouts/application
+  Rendered tasks/not_found.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 45ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:40:56 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/not_found.html.erb within layouts/application
+  Rendered tasks/not_found.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 48ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:41:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.3ms)
+
+
+
+ActionView::MissingTemplate - Missing template tasks/invalid_task_page, application/invalid_task_page with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/chantelle.belic/Documents/ada/unit-2/TaskList/app/views"
+:
+  app/controllers/tasks_controller.rb:15:in `show'
+
+Started POST "/__better_errors/4a1287e6096a1a88/variables" for 127.0.0.1 at 2018-09-18 15:41:25 -0700
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:41:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 55ms (Views: 51.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-18 15:41:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (3.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 92ms (Views: 80.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-18 15:43:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 67ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-18 15:43:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:43:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (1.7ms)
+Completed 404 Not Found in 123ms (Views: 119.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2018-09-18 15:43:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 56ms (Views: 53.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-18 15:46:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 390ms (Views: 384.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:46:42 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2018-09-18 15:46:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 48ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2018-09-18 15:50:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.6ms)
+Completed 404 Not Found in 150ms (Views: 148.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-18 15:51:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:2
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:51:05 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-09-18 15:51:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 58.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/22" for 127.0.0.1 at 2018-09-18 15:51:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.9ms)
+Completed 404 Not Found in 60ms (Views: 54.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/22" for 127.0.0.1 at 2018-09-18 15:52:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.6ms)
+Completed 404 Not Found in 61ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:53:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 64ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/0" for 127.0.0.1 at 2018-09-18 15:53:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/invalid_task_page.html.erb within layouts/application
+  Rendered tasks/invalid_task_page.html.erb within layouts/application (0.5ms)
+Completed 404 Not Found in 46ms (Views: 41.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-18 15:53:27 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 42.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-09-18 15:53:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:12
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 135ms (Views: 130.4ms | ActiveRecord: 0.4ms)
+
+
