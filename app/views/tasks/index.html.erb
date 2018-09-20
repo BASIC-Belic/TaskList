@@ -1,5 +1,43 @@
-<h1>My Tasks</h1>
 
-<%@tasks.each do |task|%>
+<!-- <%@tasks.each do |task|%>
 <p><%=task.action%></p>
 <%end%>
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="index.css">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="home-page">
+    <header class="home-header">
+      <h1>TASKLIST</h1>
+    </header>
+
+    <aside class="side-bar">
+      <nav>
+        <ul>
+          <span class="side-bar-item">All Tasks</span>
+          <span class="side-bar-item">Add Task</span>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <h2>YOUR TASKS</h2>
+      <ol class="task-list">
+        <span><li>Task One<p>Mark Complete | Edit | Delete</li></span>
+        <span><li>Task Two<p>Mark Complete | Edit | Delete</li></span>
+        <span><li>Task Three<p>Mark Complete | Edit | Delete</li></span>
+        <span><li>Task Four<p>Mark Complete | Edit | Delete</li></span>
+      </ol>
+    </main>
+
+    <footer class="footer">copyright Chantelle 2017</footer>
+  </div>
+
+</body>
+</html>

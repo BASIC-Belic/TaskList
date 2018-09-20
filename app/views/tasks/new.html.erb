@@ -1,0 +1,11 @@
+<%=form_with model: @book do |field| %>
+<p>Please fill out the form with the following details:</p>
+<%= field.label :action%>
+<%=field.text_field :action%>
+
+<%= field.label :description%>
+<%=field.text_field :description%>
+
+<%= field.label :completion_date%>
+<%=field.text_field :completion_date%>
+<%end%>

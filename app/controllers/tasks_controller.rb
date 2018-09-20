@@ -19,13 +19,10 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    render :new, status: :found
   end
 
-  <p>Action: <%= @task.action%></p>
-  <p>Description: <%= @task.description%></p>
-  <p>Completion Date: <%= @task.completion_date%></p>
-
-  # need instance var to be same in new and create, since they both use the same from in views
+  # need instance var to be the same in new and create, since they both use the same form in views
   def create
     @task = Task.new(action: params[:task][:action],
       description: params[:task][:description],
