@@ -37,7 +37,7 @@ class TasksController < ApplicationController
         # redirect_to task_path(book.id)
         # redirect_to task_path(book)
 
-        elsen
+        else
         render new_task_path
       end
     end
