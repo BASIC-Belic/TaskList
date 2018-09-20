@@ -1,9 +1,3 @@
-
-<!-- <%@tasks.each do |task|%>
-<p><%=task.action%></p>
-<%end%>
- -->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <link rel="stylesheet" href="index.css">
@@ -20,20 +14,22 @@
     <aside class="side-bar">
       <nav>
         <ul>
-          <span class="side-bar-item"><%= link_to "All Tasks", tasks_path %></span>
+          <span class="side-bar-item">All Tasks</span>
           <span class="side-bar-item"><%= link_to "Add Task", new_task_path %></span>
         </ul>
       </nav>
     </aside>
 
     <main class="main">
-      <h2>YOUR TASKS</h2>
+      <h2 id="All-tasks">YOUR TASKS</h2>
+
       <ol class="task-list">
-        <span><li>Task One<p>Mark Complete | Edit | Delete</li></span>
-        <span><li>Task Two<p>Mark Complete | Edit | Delete</li></span>
-        <span><li>Task Three<p>Mark Complete | Edit | Delete</li></span>
-        <span><li>Task Four<p>Mark Complete | Edit | Delete</li></span>
+        <%@tasks.each do |task|%>
+        <li><%=task.action%></li>
+        <p>Mark Complete | Edit | Delete</p>
+        <%end%>
       </ol>
+
     </main>
 
     <footer class="footer">copyright Chantelle 2017</footer>
