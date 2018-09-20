@@ -25,7 +25,7 @@
 
       <ol class="task-list">
         <%@tasks.each do |task|%>
-        <li><%=task.action%></li>
+        <li><%= link_to "Task#{task.id}: #{task.action}", task_path(task.id)%></li>
         <p>Mark Complete | Edit | Delete</p>
         <%end%>
       </ol>
