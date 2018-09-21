@@ -80,10 +80,6 @@
    text-align: center;
  }
 
- .task-list{
-   background-color: purple;
- }
-
  .footer {
    background-color: violet;
    grid-area: footer;
