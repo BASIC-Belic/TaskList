@@ -11,4 +11,13 @@ Rails.application.routes.draw do
   #show index page of one task
   get '/tasks/:id', to:'tasks#show', as: 'task'
 
+  #updates an exiting task
+  get '/tasks/:id/edit', to: 'tasks#update'
+
+  #brings up form to edit one existing task
+  get '/tasks/:id/edit', to: 'tasks#edit'
+
+  #delete existing task
+  delete '/puppies/:id', to: 'puppies#destroy'
+
 end

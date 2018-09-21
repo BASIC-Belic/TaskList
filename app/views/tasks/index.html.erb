@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<link rel="stylesheet" href="index.css">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-<body>
-  <div class="home-page">
+ <div class="home-page">
     <header class="home-header">
       <h1>TASKLIST</h1>
     </header>
@@ -25,15 +17,12 @@
 
       <ol class="task-list">
         <%@tasks.each do |task|%>
-        <li><%= link_to "Task#{task.id}: #{task.action}", task_path(task.id)%></li>
+        <li><%= link_to "Task#{task.id}: #{task.action.upcase}", task_path(task.id)%></li>
         <p>Mark Complete | Edit | Delete</p>
         <%end%>
       </ol>
 
     </main>
 
-    <footer class="footer">copyright Chantelle 2017</footer>
+    <footer class="footer">copyright Chantelle 2018</footer>
   </div>
-
-</body>
-</html>

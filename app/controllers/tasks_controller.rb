@@ -28,14 +28,16 @@ class TasksController < ApplicationController
       description: params[:task][:description],
       completion_date: params[:task][:completion_date])
 
+
+
       if @task.save
-        redirect_to tasks-path
+        redirect_to tasks_path
         #otherwise redirect to the newly created book page, two options:
         # redirect_to task_path(book.id)
         # redirect_to task_path(book)
 
         else
-        render new_task_path
+        render :new
       end
     end
 
