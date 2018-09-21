@@ -18,7 +18,7 @@
       <ol class="task-list">
         <%@tasks.each do |task|%>
         <li><%= link_to "Task#{task.id}: #{task.action.upcase}", task_path(task.id)%></li>
-        <p>Mark Complete | Edit | Delete</p>
+        <p>Mark Complete | <%= link_to "Edit", edit_task_path(task.id) %> | Delete</p>
         <%end%>
       </ol>
 
