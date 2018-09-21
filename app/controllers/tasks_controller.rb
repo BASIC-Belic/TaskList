@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 
   def show
 
-    @task = Task.find_by(id: params[:id].to_i)
+    @task = Task.find_by(id: params[:id])
 
     if @task.nil?
       render :invalid_task_page, status: :not_found
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find_by(id: params[:id].to_i)
+    @task = Task.find_by(id: params[:id])
 
     if @task.nil?
       render :invalid_task_page, status: :not_found
@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find_by(id: params[:id].to_i)
+    @task = Task.find_by(id: params[:id])
     if @task.update(action: params[:task][:action],
       description: params[:task][:description],
       completion_date: params[:task][:completion_date])
@@ -51,9 +51,19 @@ class TasksController < ApplicationController
       redirect_to task_path(@task.id)
       # redirect_to task_path(@task)
     else
-
       render new_task_path(@task.id)
     end
+  end
+
+  def destroy
+    task = Task.find_by(id: params[:id])
+
+    if task.destroy(id: params[:id])
+      redirect_to tasks_path
+    else
+      #do something else to show it's bad delete
+    end
+
   end
 
 end
