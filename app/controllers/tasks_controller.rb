@@ -49,7 +49,7 @@ class TasksController < ApplicationController
       completion_date: params[:task][:completion_date])
 
       redirect_to task_path(@task.id)
-      # redirect_to task_path(task)
+      # redirect_to task_path(@task)
     else
 
       render new_task_path(@task.id)

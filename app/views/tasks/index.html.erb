@@ -1,19 +1,6 @@
- <div class="home-page">
-    <header class="home-header">
-      <h1>TASKLIST</h1>
-    </header>
-
-    <aside class="side-bar">
-      <nav>
-        <ul>
-          <span class="side-bar-item">All Tasks</span>
-          <span class="side-bar-item"><%= link_to "Add Task", new_task_path %></span>
-        </ul>
-      </nav>
-    </aside>
 
     <main class="main">
-      <h2 id="All-tasks">YOUR TASKS</h2>
+      <h2>YOUR TASKS</h2>
 
       <ol class="task-list">
         <%@tasks.each do |task|%>
@@ -23,6 +10,3 @@
       </ol>
 
     </main>
-
-    <footer class="footer">copyright Chantelle 2018</footer>
-  </div>
