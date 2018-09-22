@@ -11,12 +11,12 @@
 
       <%if task.completion_date == nil%>
 
-        <p><li><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li></p>
-      <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
+        <p><li><span><%="#{task.action.capitalize}"%></span> <%= link_to "(details)", task_path(task.id), class: "details"%></li></p>
+      <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "incomplete"%> |</span>
 
-      <%else task.completion_date != nil%>
+      <%else%>
 
-        <p><li id="completed"><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li></p>
+        <p><li><span id ="completed" %><%="#{task.action.capitalize}"%></span> <%= link_to "(details)", task_path(task.id), class: "details"%></li></p>
       <span class="complete"><%= link_to "Unmark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
       <%end%>
 
