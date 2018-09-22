@@ -2,13 +2,26 @@
 <main class="main">
   <h2>YOUR TASKS</h2>
 
+  <ol class="task-list">
+    <%@tasks.each do |task|%>
 
+    <p>
+      <%if task.completion_date == nil%>
 
-    <%if task.completion_date == nil%>
-    <%= render partial: "completion_status", locals: { button_type: "Mark Complete"} %>
-    <%else%>
-    <%= render partial: "completion_status", locals: { button_type: "Unmark Complete"} %>
+      <li><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li>
+      <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
+
+      <%else task.completion_date != nil%>
+
+      <li id="completed"><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li>
+      <span class="complete"><%= link_to "Unmark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
+      <%end%>
+    </p>
+
+    <span><%= link_to "Edit", edit_task_path(task.id), method: :patch %> |</span>
+    <span><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete this task: #{task.action}?"}%></span>
+
     <%end%>
-
+  </ol>
 
 </main>
