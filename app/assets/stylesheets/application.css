@@ -40,7 +40,7 @@
    background-color: lavender;
    border: 2px solid black;
    border-radius: 50px;
-   font-family: 'Work Sans', 'sans-serif';
+   font-family: 'Work Sans', sans-serif;
    height: 100%;
    display: grid;
    grid-template-rows: 5rem auto 3rem;
