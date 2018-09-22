@@ -14,13 +14,9 @@
  *= require_self
  */
 
- body, html {
+/* html, body {
    height: 100%;
- }
-
- body {
-   margin: 0;
- }
+ } */
 
  ul {
    list-style: none;
@@ -33,28 +29,37 @@
  }
 
  a:hover{
- color: lightblue;
+ color: indigo;
  text-decoration: underline;
  }
 
  .main-layout {
+   /* height: 50%; */
+   margin: auto;
+   width: 50%;
+   background-color: lavender;
+   border: 2px solid black;
+   border-radius: 50px;
+   font-family: 'Work Sans', 'sans-serif';
    height: 100%;
    display: grid;
    grid-template-rows: 5rem auto 3rem;
-   grid-template-columns: 25rem auto;
+   grid-template-columns: 12rem auto;
    grid-template-areas:
    "layout-header layout-header"
-   "side-bar main"
+   "side-bar main-area"
    "footer footer";
  }
 
  .header {
-   background-color: yellow;
    grid-area: layout-header;
  }
 
+ h1 {
+      margin-left: 30px;
+ }
+
  .side-bar {
-   background-color: red;
    grid-area: side-bar;
  }
 
@@ -75,21 +80,29 @@
    border: 1px solid black;
    border-radius: 10px;
    margin: auto;
-   margin-top: 1em; 
+   margin-top: 1em;
+   background-color: white;
  }
 
- .main {
-   background-color: green;
-   grid-area: main;
+ .main-area {
+   grid-area: main-area;
+ }
+
+ .main-content {
+   border: 1px solid black;
+   border-radius: 20px;
+   margin: 1em;
+    background-color: white;
  }
 
  h2 {
    text-align: center;
  }
 
- .footer {
+ footer {
    background-color: violet;
    grid-area: footer;
    text-align: center;
-   padding-bottom: 0px;
+   padding-top: 1em;
+   border-radius: 0 0 50px 50px;
  }

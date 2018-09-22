@@ -6,13 +6,14 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 
   <div class="main-layout">
-    <header class="layout-header">
+    <header class="header">
       <h1>TASKLIST</h1>
     </header>
 
@@ -25,7 +26,7 @@
       </nav>
     </aside>
 
-    <main class="main">
+    <main class="main-area">
       <%= yield %>
     </main>
 

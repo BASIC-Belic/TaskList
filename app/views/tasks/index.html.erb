@@ -1,5 +1,8 @@
 
-<main class="main">
+<main class="main-area">
+
+  <div class="main-content">
+
   <h2>YOUR TASKS</h2>
 
   <ol class="task-list">
@@ -8,12 +11,12 @@
 
       <%if task.completion_date == nil%>
 
-        <p><li><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li>
-      <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span></p>
+        <p><li><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li></p>
+      <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
 
       <%else task.completion_date != nil%>
 
-        <p><li id="completed"><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li> </p>
+        <p><li id="completed"><%= link_to "#{task.action.capitalize}", task_path(task.id)%></li></p>
       <span class="complete"><%= link_to "Unmark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
       <%end%>
 
@@ -23,5 +26,7 @@
 
     <%end%>
   </ol>
+
+    </div>
 
 </main>
