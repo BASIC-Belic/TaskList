@@ -66,12 +66,17 @@ class TasksController < ApplicationController
   end
 
   def complete
-
     task = Task.find_by(id: params[:id])
-    task.completion_date = Date.today
-    task.save
 
-    redirect_to tasks_path
+    if task.completion_date == nil
+      task.completion_date = Date.today
+      task.save
+      redirect_to tasks_path
+    else
+      task.completion_date = nil
+      task.save
+      redirect_to tasks_path
+    end
   end
 
   #after mark task complete, redirect

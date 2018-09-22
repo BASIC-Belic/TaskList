@@ -6,9 +6,9 @@
         <%@tasks.each do |task|%>
         <li><%= link_to "#{task.action.upcase}", task_path(task.id)%></li>
         <p><%if task.completion_date == nil %>
-          <span><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete" %> |</span>
+          <span class="incomplete"><%= link_to "Mark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
           <%else%>
-          <span>"Do something else" |</span>
+          <span class="complete"><%= link_to "UnMark Complete", complete_task_path(task.id), method: :patch, class: "complete"%> |</span>
           <%end%>
           <span><%= link_to "Edit", edit_task_path(task.id), method: :patch %> | </span>
           <span><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete this task: #{task.action}?"}%>
