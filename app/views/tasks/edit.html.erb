@@ -1,17 +1,6 @@
 
 <main>
 
-<%= form_with model: @task do |f| %>
-<p>Edit form details:</p>
-<%= f.label :action%>
-<%=f.text_field :action, placeholder: "reading" %>
+  <%= render partial: "form", locals: { action_type: "Save Task Edit"} %>
 
-<%= f.label :description%>
-<%=f.text_field :description, placeholder: "read for 30 minutes before bed" %>
-
-<%= f.label :completion_date%>
-<%=f.text_field :completion_date, placeholder: "10/11/2018" %>
-
-<%=f.submit "Save"%>
-<% end %>
 </main>

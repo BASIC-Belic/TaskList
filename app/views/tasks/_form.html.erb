@@ -1,0 +1,13 @@
+<%=form_with model: @task do |field| %>
+<p>Please fill out the form with the following details:</p>
+<%= field.label :action%>
+<%=field.text_field :action, placeholder: "reading" %>
+
+<%= field.label :description%>
+<%=field.text_field :description, placeholder: "read for 30 minutes before bed" %>
+
+<!-- <%= field.label :completion_date%>
+<%=field.text_field :completion_date, placeholder: "10/11/2018" %> -->
+
+<%=field.submit action_type%>
+<%end%>

@@ -43,27 +43,34 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find_by(id: params[:id])
-    if @task.update(action: params[:task][:action],
+    task = Task.find_by(id: params[:id])
+    if task.update(action: params[:task][:action],
       description: params[:task][:description],
       completion_date: params[:task][:completion_date])
 
-      redirect_to task_path(@task.id)
-      # redirect_to task_path(@task)
+      redirect_to task_path(task.id)
+      # redirect_to task_path(task)
     else
-      render new_task_path(@task.id)
+      render new_task_path(task.id)
     end
   end
 
   def destroy
     task = Task.find_by(id: params[:id])
 
-    if task.destroy(id: params[:id])
+    if task.destroy
       redirect_to tasks_path
     else
       #do something else to show it's bad delete
     end
+  end
 
+  private
+
+  def task_params
+    return params.require(:task).permit(
+    :action, :description)
+    # :completion_date
   end
 
 end
