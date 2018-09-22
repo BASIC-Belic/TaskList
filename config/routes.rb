@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #delete existing task
   delete '/tasks/:id', to: 'tasks#destroy'
 
-patch '/tasks/:id/complete', to: 'tasks#complete', as: 'complete_task'
+  patch '/tasks/:id/complete', to: 'tasks#complete', as: 'complete_task'
 
   # resources :tasks
 
