@@ -21,9 +21,7 @@ class TasksController < ApplicationController
 
   # need instance var to be the same in new and create, since they both use the same form in views
   def create
-    @task = Task.new(action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date])
+    @task = Task.new(task_params)
 
       if @task.save
         redirect_to tasks_path
@@ -44,9 +42,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find_by(id: params[:id])
-    if task.update(action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date])
+    if task.update(task_params)
 
       redirect_to task_path(task.id)
       # redirect_to task_path(task)
@@ -78,8 +74,6 @@ class TasksController < ApplicationController
       redirect_to tasks_path
     end
   end
-
-  #after mark task complete, redirect
 
   private
 
