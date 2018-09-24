@@ -14053,3 +14053,187 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 130ms (Views: 97.7ms | ActiveRecord: 17.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:55:02 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 73ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:55:05 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (10.3ms)
+Completed 200 OK in 25ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:55:29 -0700
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/chantelle.belic/.rvm/gems/ruby-2.5.1@TaskListRails/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 34ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:56:00 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-24 14:56:10 -0700
+Processing by StaticPagesController#home as HTML
+Completed 406 Not Acceptable in 408ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#home is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:56:10 -0700
+Processing by TasksController#index as HTML
+Processing by StaticPagesController#home as HTML
+Completed 406 Not Acceptable in 190ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#home is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:9
+  Rendered tasks/index.html.erb within layouts/application (83.5ms)
+Started POST "/__better_errors/4fcc6f9489730bbd/variables" for 127.0.0.1 at 2018-09-24 14:56:12 -0700
+Completed 200 OK in 3131ms (Views: 2860.5ms | ActiveRecord: 52.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:57:30 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:57:50 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:58:21 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 104ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:59:00 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:59:24 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:59:34 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 96ms (Views: 89.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 14:59:36 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 15:00:07 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 180ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 15:00:33 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 130ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 15:00:47 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 115ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 15:00:56 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-24 15:01:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (7.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:9
+  Rendered tasks/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 68ms (Views: 56.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-24 15:01:02 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (63.9ms)
+  Rendered tasks/new.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 174ms (Views: 168.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-24 15:01:06 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FRLVYFC1OguunLaMAY/UgDmYH4wA4MRgDntqnf1M8Tg4fq5Qnw4pRMlQXFf0Ynqvm3LABvj5I/fAA1EUUWiTGg==", "task"=>{"action"=>"read", "description"=>""}, "commit"=>"Save New Task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:26
+  [1m[36mTask Create (22.3ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["action", "read"], ["description", ""], ["created_at", "2018-09-24 22:01:06.730768"], ["updated_at", "2018-09-24 22:01:06.730768"]]
+  ↳ app/controllers/tasks_controller.rb:26
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:26
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 32ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-24 15:01:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:9
+  Rendered tasks/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 182ms (Views: 177.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-24 15:01:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/views/tasks/index.html.erb:9
+  Rendered tasks/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 313ms (Views: 308.7ms | ActiveRecord: 0.4ms)
+
+
